@@ -16,8 +16,16 @@ CREATE TABLE students (
 
 -- Create a "courses" table
 
-REATE TABLE courses (
+CREATE TABLE courses (
     course_id SERIAL PRIMARY KEY,          
     course_name VARCHAR(100) NOT NULL,               
     credits INT                            
+);
+
+-- Create an "enrollment" table
+
+CREATE TABLE enrollment (
+    enrollment_id SERIAL PRIMARY KEY,       
+    student_id INT REFERENCES students(student_id),  
+    course_id INT REFERENCES courses(course_id)  
 );
