@@ -53,3 +53,11 @@ INSERT INTO enrollment (student_id, course_id) VALUES
 (1, 2),
 (2, 1),
 (3, 2);
+
+
+-- Run SQL queries to complete the following tasks:
+Query 1:
+-- Insert a new student record with the following details:
+
+INSERT INTO students (student_name, age, email, frontend_mark, backend_mark, status) VALUES
+('Aklima', 25, 'aklima@example.com', 70, 75, NULL);
