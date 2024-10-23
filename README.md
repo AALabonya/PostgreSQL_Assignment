@@ -31,15 +31,9 @@ The **WHERE** clause filters rows based on specified conditions, allowing you to
 ## 9. Explain the GROUP BY clause and its role in aggregation operations.
 The **GROUP BY** clause divides a result set into groups based on specified columns, allowing you to perform aggregate functions on each group.
 
-## 10. How can you calculate aggregate functions like COUNT, SUM, and AVG in PostgreSQL?
-Aggregate functions are used to calculate summary statistics for a group of values. For example:
+## 10.What is the purpose of an index in PostgreSQL, and how does it optimize query performance?
 
-**COUNT(*)**: Counts the total number of rows.
-
-**SUM(column_name)**: Calculates the sum of values in a column.
-
-**AVG(column_name)**: Calculates the average of values in a column.
-
+**An index in PostgreSQL** helps the database find data faster, like a shortcut. It speeds up searches, so instead of looking through all the data, it quickly finds what you need. However, it uses extra space and can slow down adding or updating data.
 
 
 
