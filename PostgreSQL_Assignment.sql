@@ -115,13 +115,15 @@ OFFSET 2;
 -- Query 6:
 -- Retrieve the course names and the number of students enrolled in each course.
 SELECT c.course_name, COUNT(e.student_id) AS student_enrolled
-FROM courses c JOIN enrollment e ON c.course_id = e.course_id
-GROUP BY c.course_name
+FROM courses c
+    LEFT JOIN enrollment e USING (course_id)
+GROUP BY
+    c.course_name;
 
 -- Query 7:
 -- Calculate and display the average age of all students.
 
-SELECT AVG(age) AS average_age 
+SELECT ROUND(AVG(age), 2) AS average_age 
 FROM students
 
 -- Query 8:
@@ -129,4 +131,4 @@ FROM students
 
 SELECT student_name 
  FROM students
- WHERE email LIKE '%example.com%';
+ WHERE email ILIKE '%example.com%';
